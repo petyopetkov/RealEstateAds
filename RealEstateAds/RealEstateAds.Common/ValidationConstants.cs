@@ -14,5 +14,11 @@
         public const int AddressMaxLength = 500;
 
         public const int ContactMaxLength = 150;
+
+        public const int CommentContentMinLength = 10;
+        public const int CommentContentMaxLength = 500;
+
+        public const int RatingMinValue = 1;
+        public const int RatingMaxValue = 5;
     }
 }
