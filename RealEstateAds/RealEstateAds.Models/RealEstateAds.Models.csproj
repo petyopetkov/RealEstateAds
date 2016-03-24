@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Comment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rating.cs" />
     <Compile Include="RealEstate.cs" />
     <Compile Include="RealEstateType.cs" />
     <Compile Include="User.cs" />
