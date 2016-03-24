@@ -11,7 +11,5 @@
         RealEstate GetById(int id);
 
         RealEstate Create(RealEstate newRealEstate);
-
-        void DeleteById(int id);
     }
 }

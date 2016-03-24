@@ -24,12 +24,6 @@
             return newRealEstate;
         }
 
-        public void DeleteById(int id)
-        {
-            this.realEstates.Delete(id);
-            this.realEstates.SaveChanges();
-        }
-
         public IQueryable<RealEstate> GetAll(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
         {
             return this.realEstates.All()
