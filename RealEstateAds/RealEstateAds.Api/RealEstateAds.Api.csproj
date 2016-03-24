@@ -219,6 +219,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RealEstateAds.Common\RealEstateAds.Common.csproj">
+      <Project>{7dffc493-0060-410e-9ef4-6851e8327688}</Project>
+      <Name>RealEstateAds.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RealEstateAds.Data\RealEstateAds.Data.csproj">
       <Project>{bd490647-00f0-4792-83cd-19c770ea7185}</Project>
       <Name>RealEstateAds.Data</Name>
@@ -226,6 +230,10 @@
     <ProjectReference Include="..\RealEstateAds.Models\RealEstateAds.Models.csproj">
       <Project>{e953150a-f932-4d41-94a4-247eec7d96bd}</Project>
       <Name>RealEstateAds.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RealEstateAds.Services\RealEstateAds.Services.csproj">
+      <Project>{f9e74a07-2074-49e0-b6c2-dfd69bc9aba4}</Project>
+      <Name>RealEstateAds.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

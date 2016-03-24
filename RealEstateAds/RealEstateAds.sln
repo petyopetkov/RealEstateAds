@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateAds.Data", "RealE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateAds.Models", "RealEstateAds.Models\RealEstateAds.Models.csproj", "{E953150A-F932-4D41-94A4-247EEC7D96BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateAds.Services", "RealEstateAds.Services\RealEstateAds.Services.csproj", "{F9E74A07-2074-49E0-B6C2-DFD69BC9ABA4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{E953150A-F932-4D41-94A4-247EEC7D96BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E953150A-F932-4D41-94A4-247EEC7D96BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E953150A-F932-4D41-94A4-247EEC7D96BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9E74A07-2074-49E0-B6C2-DFD69BC9ABA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9E74A07-2074-49E0-B6C2-DFD69BC9ABA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9E74A07-2074-49E0-B6C2-DFD69BC9ABA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9E74A07-2074-49E0-B6C2-DFD69BC9ABA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
