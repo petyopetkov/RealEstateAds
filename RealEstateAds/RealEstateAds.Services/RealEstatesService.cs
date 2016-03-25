@@ -7,7 +7,7 @@
     using RealEstateAds.Models;
     using RealEstateAds.Services.Contracts;
     
-    class RealEstatesService : IRealEstatesService
+    class RealEstatesService : IRealEstatesServices
     {
         private IRepository<RealEstate> realEstates;
 
@@ -26,6 +26,11 @@
 
         public IQueryable<RealEstate> GetAll(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
         {
+            if (take > GlobalConstants.TakeValue)
+            {
+                take = GlobalConstants.TakeValue;
+            }
+
             return this.realEstates.All()
                 .OrderByDescending(r => r.CreatedOn)
                 .Skip(skip)

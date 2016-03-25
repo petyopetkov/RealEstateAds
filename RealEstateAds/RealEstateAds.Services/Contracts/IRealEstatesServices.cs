@@ -4,7 +4,7 @@
 
     using RealEstateAds.Models;
 
-    public interface IRealEstatesService
+    public interface IRealEstatesServices
     {
         IQueryable<RealEstate> GetAll(int skip, int take);
 
