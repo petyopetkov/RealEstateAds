@@ -1,6 +1,5 @@
 ﻿namespace RealEstateAds.Services
 {
-    using System;
     using System.Linq;
 
     using Common;
