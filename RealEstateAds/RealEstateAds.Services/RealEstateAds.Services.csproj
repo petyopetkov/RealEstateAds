@@ -62,7 +62,7 @@
     <Compile Include="Contracts\IRealEstatesServices.cs" />
     <Compile Include="Contracts\IUsersServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealEstatesService.cs" />
+    <Compile Include="RealEstatesServices.cs" />
     <Compile Include="UsersServices.cs" />
   </ItemGroup>
   <ItemGroup>

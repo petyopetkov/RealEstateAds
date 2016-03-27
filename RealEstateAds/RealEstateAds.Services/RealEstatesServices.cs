@@ -7,11 +7,11 @@
     using RealEstateAds.Models;
     using RealEstateAds.Services.Contracts;
     
-    class RealEstatesService : IRealEstatesServices
+    public class RealEstatesServices : IRealEstatesServices
     {
         private IRepository<RealEstate> realEstates;
 
-        public RealEstatesService(IRepository<RealEstate> realEstates)
+        public RealEstatesServices(IRepository<RealEstate> realEstates)
         {
             this.realEstates = realEstates;
         }
