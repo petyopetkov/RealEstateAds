@@ -16,7 +16,7 @@
             this.users = users;
         }
 
-        public User GetByUserByName(string userName)
+        public User GetUserByUserName(string userName)
         {
             return this.users.All()
                 .FirstOrDefault(u => u.UserName == userName);

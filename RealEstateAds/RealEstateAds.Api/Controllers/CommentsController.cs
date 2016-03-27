@@ -30,7 +30,7 @@
                 skip = GlobalConstants.SkipValue;
             }
 
-            if (take < 0)
+            if (take < 0 || take > GlobalConstants.TakeValue)
             {
                 take = GlobalConstants.TakeValue;
             }
@@ -69,6 +69,37 @@
             var result = this.Mapper.Map<CommentResponceModel>(newComment);
             result.AuthorName = authorName;
             return this.Created("", result);
+        }
+
+        [Route("api/Comments/ByUser/{id}")]
+        [HttpGet]
+        public IHttpActionResult ByUser(string id, int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
+        {
+            if (skip < GlobalConstants.SkipValue)
+            {
+                skip = GlobalConstants.SkipValue;
+            }
+
+            if (take < 0 || take > GlobalConstants.TakeValue)
+            {
+                take = GlobalConstants.TakeValue;
+            }
+            
+
+            var result = this.comments
+                .GetAll()
+                .Where(c => c.Author.UserName == id)
+                .To<CommentResponceModel>()
+                .Skip(skip)
+                .Take(take)
+                .ToList();
+
+            if (result == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.Ok(result);
         }
     }
 }

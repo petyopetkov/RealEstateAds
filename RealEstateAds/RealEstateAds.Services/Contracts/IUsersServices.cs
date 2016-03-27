@@ -6,7 +6,7 @@
     {
         string GetUserNameById(string id);
 
-        User GetByUserByName(string userName);
+        User GetUserByUserName(string userName);
 
         void RateUser(string id, int value);
     }
