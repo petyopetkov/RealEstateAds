@@ -36,7 +36,7 @@
             var newRating = new Rating()
             {
                 Value = value,
-                AuthorId = id
+                UserId = id
             };
 
             user.RatingCollection.Add(newRating);
