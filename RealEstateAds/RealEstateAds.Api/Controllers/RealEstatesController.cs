@@ -48,8 +48,18 @@
                 return this.NotFound();
             }
 
-            var result = this.Mapper.Map<RealEstatePublicDetailsResponceModel>(realEstate);
-            return this.Ok(result);
+            if (this.User.Identity.IsAuthenticated)
+            {
+                var result = this.Mapper.Map<RealEstatePrivateDetailsResponceModel>(realEstate);
+
+                return this.Ok(result);
+            }
+            else
+            {
+                var result = this.Mapper.Map<RealEstatePublicDetailsResponceModel>(realEstate);
+
+                return this.Ok(result);
+            }            
         }
 
         public IHttpActionResult Post(RealEstateRequestModel model)
