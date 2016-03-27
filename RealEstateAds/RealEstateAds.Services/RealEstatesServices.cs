@@ -24,9 +24,14 @@
             return newRealEstate;
         }
 
-        public IQueryable<RealEstate> GetAll(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
+        public IQueryable<RealEstate> GetAll(int skip, int take)
         {
-            if (take > GlobalConstants.TakeValue)
+            if (skip < GlobalConstants.SkipValue)
+            {
+                skip = GlobalConstants.SkipValue;
+            }
+
+            if (take > GlobalConstants.TakeValue || take < 0)
             {
                 take = GlobalConstants.TakeValue;
             }

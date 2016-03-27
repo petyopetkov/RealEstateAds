@@ -1,16 +1,16 @@
 ﻿namespace RealEstateAds.Api.Controllers
 {
     using System;
-    using System.Collections.Generic;
+    using System.Linq;
     using System.Web.Http;
 
     using Common;
     using Models.RealEstates;
     using Microsoft.AspNet.Identity;
-    using RealEstateAds.Models;
     using RealEstateAds.Api.Infrastructure.Mapping;
+    using RealEstateAds.Models;
     using Services.Contracts;
-    
+
     public class RealEstatesController : BaseController
     {
         private IRealEstatesServices realEstates;
@@ -20,18 +20,20 @@
             this.realEstates = realEstates;
         }
 
-        //public IHttpActionResult Get(int skip, int take)
-        //{
-        //    if (skip < GlobalConstants.SkipValue)
-        //    {
-        //        return this.BadRequest("Skip must be positive number");
-        //    }
+        public IHttpActionResult Get(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
+        {
+            var result = this.realEstates
+                .GetAll(skip, take)
+                .To<RealEstateBaseResponceModel>()
+                .ToList();
 
-        //    if (take < 0 || take > GlobalConstants.TakeValue)
-        //    {
-        //        return this.BadRequest("Take must be number between 0 and 100");
-        //    }
-        //}
+            if (result == null)
+            {
+                return this.NotFound();
+            }
+
+            return this.Ok(result);
+        }
 
         public IHttpActionResult Post(RealEstateRequestModel model)
         {
