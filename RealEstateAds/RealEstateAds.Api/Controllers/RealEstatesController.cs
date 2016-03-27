@@ -11,6 +11,7 @@
     using RealEstateAds.Models;
     using Services.Contracts;
 
+    [Authorize]
     public class RealEstatesController : BaseController
     {
         private IRealEstatesServices realEstates;
@@ -20,6 +21,7 @@
             this.realEstates = realEstates;
         }
 
+        [AllowAnonymous]
         public IHttpActionResult Get(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
         {
             var result = this.realEstates
@@ -32,6 +34,21 @@
                 return this.NotFound();
             }
 
+            return this.Ok(result);
+        }
+
+        [AllowAnonymous]
+        public IHttpActionResult Get(int id)
+        {
+            var realEstate = this.realEstates
+                .GetById(id);
+
+            if (realEstate == null)
+            {
+                return this.NotFound();
+            }
+
+            var result = this.Mapper.Map<RealEstatePublicDetailsResponceModel>(realEstate);
             return this.Ok(result);
         }
 

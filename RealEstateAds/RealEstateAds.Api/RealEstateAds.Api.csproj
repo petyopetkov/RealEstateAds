@@ -218,6 +218,7 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\RealEstates\RealEstateBaseResponceModel.cs" />
+    <Compile Include="Models\RealEstates\RealEstatePublicDetailsResponceModel.cs" />
     <Compile Include="Models\RealEstates\RealEstateRequestModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
