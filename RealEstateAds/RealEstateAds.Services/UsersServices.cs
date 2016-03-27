@@ -1,5 +1,6 @@
 ﻿namespace RealEstateAds.Services
 {
+    using System;
     using System.Linq;
 
     using Data;
@@ -15,11 +16,18 @@
             this.users = users;
         }
 
-        public User GetByUserName(string userName)
+        public User GetByUserByName(string userName)
         {
             return this.users.All()
                 .FirstOrDefault(u => u.UserName == userName);
                 
+        }
+
+        public string GetUserNameById(string id)
+        {
+            var user = this.users.GetById(id);
+
+            return user.UserName;
         }
 
         public void RateUser(string id, int value)

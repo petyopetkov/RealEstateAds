@@ -4,7 +4,9 @@
 
     public interface IUsersServices
     {
-        User GetByUserName(string userName);
+        string GetUserNameById(string id);
+
+        User GetByUserByName(string userName);
 
         void RateUser(string id, int value);
     }

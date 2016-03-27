@@ -24,12 +24,10 @@
             return newComment;
         }
 
-        public IQueryable<Comment> GetAll(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
+        public IQueryable<Comment> GetAll()
         {
             return this.comments.All()
-                .OrderByDescending(c => c.CreatedOn)
-                .Skip(skip)
-                .Take(take);
+                .OrderByDescending(c => c.CreatedOn);
         }
 
         public Comment GetById(int id)

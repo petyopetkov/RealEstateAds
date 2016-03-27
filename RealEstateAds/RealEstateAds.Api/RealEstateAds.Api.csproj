@@ -206,6 +206,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\RealEstatesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -217,6 +218,7 @@
     <Compile Include="Infrastructure\Mapping\QueryableExtensions.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Comments\CommentRequestModel.cs" />
     <Compile Include="Models\Comments\CommentResponceModel.cs" />
     <Compile Include="Models\RealEstates\RealEstateBaseResponceModel.cs" />
     <Compile Include="Models\RealEstates\RealEstatePrivateDetailsResponceModel.cs" />

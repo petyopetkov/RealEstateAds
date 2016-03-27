@@ -14,7 +14,7 @@
     [Authorize]
     public class RealEstatesController : BaseController
     {
-        private IRealEstatesServices realEstates;
+        private readonly IRealEstatesServices realEstates;
 
         public RealEstatesController(IRealEstatesServices realEstates)
         {
