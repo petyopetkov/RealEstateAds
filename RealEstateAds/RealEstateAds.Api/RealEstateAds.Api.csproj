@@ -208,6 +208,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
     <Compile Include="Controllers\RealEstatesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,6 +225,7 @@
     <Compile Include="Models\RealEstates\RealEstatePrivateDetailsResponceModel.cs" />
     <Compile Include="Models\RealEstates\RealEstatePublicDetailsResponceModel.cs" />
     <Compile Include="Models\RealEstates\RealEstateRequestModel.cs" />
+    <Compile Include="Models\Users\UserResponceModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
