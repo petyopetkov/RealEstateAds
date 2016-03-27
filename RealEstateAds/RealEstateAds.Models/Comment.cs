@@ -1,10 +1,11 @@
 ﻿namespace RealEstateAds.Models
 {
+    using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     using Common;
-
+    
     public class Comment
     {
         public int Id { get; set; }
@@ -13,6 +14,8 @@
         [MinLength(ValidationConstants.CommentContentMinLength)]
         [MaxLength(ValidationConstants.CommentContentMaxLength)]
         public string Content { get; set; }
+
+        public DateTime CreatedOn { get; set; }
 
         [ForeignKey("Author")]
         public string AuthorId { get; set; }

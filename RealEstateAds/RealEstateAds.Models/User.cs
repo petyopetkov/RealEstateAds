@@ -22,6 +22,24 @@
 
         public double Rating { get; set; }
 
+        public virtual ICollection<Rating> RatingCollection
+        {
+            get { return this.ratingCollection; }
+            set { this.ratingCollection = value; }
+        }
+
+        public virtual ICollection<RealEstate> RealEstates
+        {
+            get { return this.realEstates; }
+            set { this.realEstates = value; }
+        }
+
+        public virtual ICollection<Comment> Comments
+        {
+            get { return this.comments; }
+            set { this.comments = value; }
+        }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager, string authenticationType)
         {
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);
