@@ -59,10 +59,10 @@
   <ItemGroup>
     <Compile Include="CommentsServices.cs" />
     <Compile Include="Contracts\ICommentsServices.cs" />
-    <Compile Include="Contracts\IRealEstatesService.cs" />
+    <Compile Include="Contracts\IRealEstatesServices.cs" />
     <Compile Include="Contracts\IUsersServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealEstatesService.cs" />
+    <Compile Include="RealEstatesServices.cs" />
     <Compile Include="UsersServices.cs" />
   </ItemGroup>
   <ItemGroup>

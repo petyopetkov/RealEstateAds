@@ -10,8 +10,8 @@
         [Range(ValidationConstants.RatingMinValue, ValidationConstants.RatingMaxValue)]
         public int Value { get; set; }
 
-        public string AuthorId { get; set; }
+        public string UserId { get; set; }
 
-        public virtual User Author { get; set; }
+        public virtual User User { get; set; }
     }
 }

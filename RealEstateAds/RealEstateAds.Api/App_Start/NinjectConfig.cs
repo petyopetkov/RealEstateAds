@@ -9,6 +9,7 @@ namespace RealEstateAds.Api
     using Data;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
+    using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;    
 
     public static class NinjectConfig 
@@ -50,6 +51,10 @@ namespace RealEstateAds.Api
             kernel.Bind<IRealEstateAdsDbContext>().To<RealEstateAdsDbContext>().InRequestScope();
 
             kernel.Bind(typeof(IRepository<>)).To(typeof(GenericRepository<>));
+
+            kernel.Bind(b => b.From("RealEstateAds.Services")
+                              .SelectAllClasses()
+                              .BindDefaultInterface());
         }        
     }
 }

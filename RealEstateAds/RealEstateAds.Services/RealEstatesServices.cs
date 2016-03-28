@@ -7,11 +7,11 @@
     using RealEstateAds.Models;
     using RealEstateAds.Services.Contracts;
     
-    class RealEstatesService : IRealEstatesService
+    public class RealEstatesServices : IRealEstatesServices
     {
         private IRepository<RealEstate> realEstates;
 
-        public RealEstatesService(IRepository<RealEstate> realEstates)
+        public RealEstatesServices(IRepository<RealEstate> realEstates)
         {
             this.realEstates = realEstates;
         }
@@ -24,8 +24,18 @@
             return newRealEstate;
         }
 
-        public IQueryable<RealEstate> GetAll(int skip = GlobalConstants.SkipValue, int take = GlobalConstants.TakeValue)
+        public IQueryable<RealEstate> GetAll(int skip, int take)
         {
+            if (skip < GlobalConstants.SkipValue)
+            {
+                skip = GlobalConstants.SkipValue;
+            }
+
+            if (take > GlobalConstants.TakeValue || take < 0)
+            {
+                take = GlobalConstants.TakeValue;
+            }
+
             return this.realEstates.All()
                 .OrderByDescending(r => r.CreatedOn)
                 .Skip(skip)
